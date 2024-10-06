@@ -43,6 +43,13 @@ export default function Header() {
                 </TouchableOpacity>
 
             </View>
+            
+            <View style={styles.linePrincipal}>
+                <View style={styles.line1}/>
+                <Text style={styles.lineText}>ou</Text>
+                <View style={styles.line2}/>
+            </View>
+
 
         </View>
     )
@@ -68,9 +75,33 @@ const styles = StyleSheet.create({
     },
     Icons: {
         flexDirection: 'row',
-        padding: 20,
+        padding: 15,
+        paddingRight: 23,
+        paddingLeft: 23,
         justifyContent: 'space-around'        
-        
+    },
+    linePrincipal: {
+        flexDirection: 'row',
+        justifyContent: 'space-around'
+    },
+    line1: {
+        height: 0.5,
+        backgroundColor: 'black',
+        marginVertical: 10,
+        width: '38%',
+        marginLeft: 30,
+        backgroundColor: '#C0C0C0'
+    },
+    lineText: {
+        color: '#DCDCDC'
+    },
+    line2: {
+        height: 0.5,
+        backgroundColor: 'black',
+        marginVertical: 10,
+        width: '38%',
+        marginRight: 30,
+        backgroundColor: '#C0C0C0'
     }
 
 })
