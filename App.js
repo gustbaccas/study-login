@@ -1,4 +1,4 @@
-import React, { useState, UseState } from 'react'
+import React, { useState } from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native';
 
 import Header from './src/Header';
