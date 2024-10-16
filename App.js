@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TextInput, View } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
 
 import Header from './src/Header';
 
 export default function App() {
   const [id, setId] = useState('')
   const [senha, setSenha] = useState('')
+  const [isChecked, setIsChecked] = useState(false)
+
+  const handlePress = () => {
+    setIsChecked(!isChecked)
+  }
 
 
   return (
@@ -38,6 +43,14 @@ export default function App() {
         />
       </View>
 
+      <View style={styles.checkboxContainer}>
+      <TouchableOpacity onPress={handlePress} style={styles.checkboxRow}activeOpacity={1}>
+      <View style={[styles.checkbox, isChecked && styles.checked]}>
+        {isChecked && <Text style={styles.checkmark}>✓</Text>}
+      </View>
+      <Text style={styles.label}>Mantenha-me conectado</Text>
+    </TouchableOpacity>
+      </View>
 
     </View>
   );
@@ -47,7 +60,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#4B0082',
-    justifyContent: 'flex-start'
   },
   id: {
     marginTop: 60,
@@ -58,7 +70,7 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
     fontWeight: 'bold',
     paddingBottom: 5,
-    letterSpacing: 1
+    letterSpacing: 1,
   },
   input: {
     height: 40,
@@ -69,18 +81,42 @@ const styles = StyleSheet.create({
     color: '#808080',
     backgroundColor: '#000000',
     borderRadius: 7,
-    letterSpacing: 1
+    letterSpacing: 1,
   },
   senha: {
     marginTop: 18,
-    marginLeft: 33
+    marginLeft: 33,
   },
   senhaText: {
     fontSize: 14,
     color: '#FFFFFF',
     fontWeight: 'bold',
     paddingBottom: 5,
+    letterSpacing: 1,
+  },
+  checkboxContainer:{
+    padding: 10,
+    marginTop: 5,
+    marginLeft: 24,
+  },
+  checkboxRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    
+  },
+  checkbox: {
+    width: 24, 
+    height: 24,
+    borderWidth: 0.5,
+    borderColor: '#C0C0C0',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
+    borderRadius: 5
+  },
+  label: {
+    color: '#FFFFFF',
     letterSpacing: 1
   }
-  
+
 });
