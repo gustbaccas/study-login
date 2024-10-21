@@ -71,14 +71,15 @@ const styles = StyleSheet.create({
         fontSize: 24,
         color: 'white',
         paddingTop: 15,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        
     },
     Icons: {
         flexDirection: 'row',
         padding: 15,
         paddingRight: 23,
         paddingLeft: 23,
-        justifyContent: 'space-around'        
+        justifyContent: 'space-around',      
     },
     linePrincipal: {
         flexDirection: 'row',

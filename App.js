@@ -51,6 +51,12 @@ export default function App() {
       <Text style={styles.label}>Mantenha-me conectado</Text>
     </TouchableOpacity>
       </View>
+      
+      <View style={styles.containerConnect}>
+        <TouchableOpacity style={styles.connect}>
+          <Text style={styles.connectText}>CONECTAR</Text>
+        </TouchableOpacity>
+      </View>
 
     </View>
   );
@@ -96,7 +102,7 @@ const styles = StyleSheet.create({
   },
   checkboxContainer:{
     padding: 10,
-    marginTop: 5,
+    marginTop: 3,
     marginLeft: 24,
   },
   checkboxRow: {
@@ -117,6 +123,24 @@ const styles = StyleSheet.create({
   label: {
     color: '#FFFFFF',
     letterSpacing: 1
+  },
+  checkmark: {
+    color: '#FFFFFF',
+    fontWeight: 'bold'
+  },
+  containerConnect: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#000000',
+    height: 50,
+    marginLeft: 33,
+    marginRight: 33,
+    marginTop: 15,
+    borderRadius: 8
+  },
+  connectText: {
+    color: '#FFFFFF',
+    fontWeight: 'bold'
   }
 
 });
