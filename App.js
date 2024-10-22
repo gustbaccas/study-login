@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { StyleSheet, Text, TextInput, View, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TextInput, View, TouchableOpacity, Alert } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 
 import Header from './src/Header';
@@ -12,6 +12,10 @@ export default function App() {
 
   const handlePress = () => {
     setIsChecked(!isChecked)
+  }
+
+  const handlePhoneLogin = () => {
+    Alert.alert('Aviso', 'Login com número de telefone não está disponivel no momento')
   }
 
   return (
@@ -71,6 +75,11 @@ export default function App() {
         </TouchableOpacity>
       </View>
 
+      <View style={styles.conecctPhoneNumber}>
+        <TouchableOpacity onPress={handlePhoneLogin}>
+          <Text style={styles.textPhoneNumber}>Conecte-se com seu número de telefone</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -164,6 +173,13 @@ const styles = StyleSheet.create({
   connectText: {
     color: '#FFFFFF',
     fontWeight: 'bold'
+  },
+  conecctPhoneNumber: {
+    padding: 10,
+    alignItems: 'center'
+  },
+  textPhoneNumber: {
+    color: '#F0F8FF'
   }
 
 });
