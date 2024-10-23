@@ -80,6 +80,12 @@ export default function App() {
           <Text style={styles.textPhoneNumber}>Conecte-se com seu número de telefone</Text>
         </TouchableOpacity>
       </View>
+
+      <View style={styles.containerAccount}>
+        <TouchableOpacity style={styles.createAccount}>
+          <Text style={styles.textAccount}>CRIAR CONTA</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
@@ -140,7 +146,6 @@ const styles = StyleSheet.create({
   checkboxRow: {
     flexDirection: 'row',
     alignItems: 'center',
-
   },
   checkbox: {
     width: 24,
@@ -172,14 +177,32 @@ const styles = StyleSheet.create({
   },
   connectText: {
     color: '#FFFFFF',
-    fontWeight: 'bold'
+    fontWeight: 'bold',
+    letterSpacing: 1
   },
   conecctPhoneNumber: {
     padding: 10,
     alignItems: 'center'
   },
   textPhoneNumber: {
-    color: '#F0F8FF'
+    color: '#F0F8FF',
+  },
+  containerAccount: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: 50,
+    backgroundColor: 'blue',
+    borderColor: '#000000',
+    borderWidth: 2,
+    marginTop: 18,
+    marginLeft: 33,
+    marginRight: 33,
+    borderRadius: 8
+  },
+  textAccount: {
+    color: '#FFFFFF',
+    fontWeight: 'bold',
+    letterSpacing: 1
   }
 
 });
