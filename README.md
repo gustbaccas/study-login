@@ -46,12 +46,15 @@ Siga os passos abaixo para instalar e rodar o projeto localmente:
    git clone https://github.com/seu-usuario/ea-login-app.git
 
 2. Navegue até o diretório do projeto:
+    ```bash
     cd ea-login-app
 
 3. Instale as dependências necessárias:
+    ```bash
     npm install
 
 4. Inicie o aplicativo usando o Expo:
+    ```bash
     npx expo start
 
 5. Escaneie o QR code com o aplicativo Expo Go em seu dispositivo móvel, ou inicie o emulador Android/iOS para testar o app.
