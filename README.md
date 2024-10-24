@@ -43,7 +43,7 @@ Siga os passos abaixo para instalar e rodar o projeto localmente:
 
 1. Clone este repositório:
    ```bash
-   git clone https://github.com/seu-usuario/ea-login-app.git
+   git clone https://github.com/gustbaccas/ea-login-app.git
 
 2. Navegue até o diretório do projeto:
     ```bash
