@@ -47,7 +47,7 @@ Siga os passos abaixo para instalar e rodar o projeto localmente:
 
 2. Navegue até o diretório do projeto:
     ```bash
-    cd ea-login-app
+    cd study-login
 
 3. Instale as dependências necessárias:
     ```bash
